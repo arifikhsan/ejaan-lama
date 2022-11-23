@@ -5,6 +5,9 @@ export default function Home() {
   const initialSentences = [
     'ini tidak seperti yang kamu bayangkan',
     'disebelah sini, bung!',
+    'seseorang sedang duduk duduk di lantai kemudian tembakan dihempaskan kearahnya',
+    'petani bekerja giat gembira',
+    'tenaga bekerja teguh bersatu'
   ];
   const initialSentence =
     initialSentences[Math.floor(Math.random() * initialSentences.length)];
