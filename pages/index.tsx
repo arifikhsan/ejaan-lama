@@ -6,6 +6,7 @@ export default function Home() {
 
   const _convertSentence = () => {
     const newSentence = sentence
+      .replace(/j/gi, 'dj')
       .replace(/u/gi, 'oe')
       .replace(/y/gi, 'j');
     setOldSentence(newSentence);
