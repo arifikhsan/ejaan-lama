@@ -7,7 +7,7 @@ export default function Home() {
     'disebelah sini, bung!',
     'seseorang sedang duduk duduk di lantai kemudian tembakan dihempaskan kearahnya',
     'petani bekerja giat gembira',
-    'tenaga bekerja teguh bersatu'
+    'tenaga bekerja teguh bersatu',
   ];
   const initialSentence =
     initialSentences[Math.floor(Math.random() * initialSentences.length)];
@@ -16,6 +16,7 @@ export default function Home() {
 
   const _convertSentence = () => {
     const newSentence = sentence
+      .replace(/c/gi, 'tj')
       .replace(/w*i\b/gi, 'ie')
       .replace(/j/gi, 'dj')
       .replace(/u/gi, 'oe')
@@ -30,7 +31,7 @@ export default function Home() {
   }, [sentence]);
 
   return (
-    <div className='max-w-xl mx-auto p-4'>
+    <div className='max-w-xl p-4 mx-auto'>
       <Head>
         <title>Ejaan Lama</title>
       </Head>
@@ -39,13 +40,13 @@ export default function Home() {
       </h1>
       <div>
         <textarea
-          className='w-full mt-4 h-64 p-2 border border-gray-300 rounded'
+          className='w-full h-64 p-2 mt-4 border border-gray-300 rounded'
           placeholder='Masukkan kalimat disini'
           value={sentence}
           onChange={(e) => setSentence(e.target.value)}
         />
         <textarea
-          className='w-full mt-4 h-64 p-2 border border-gray-300 rounded'
+          className='w-full h-64 p-2 mt-4 border border-gray-300 rounded'
           placeholder='Disini hasilnja boeng'
           value={oldSentence}
           readOnly
